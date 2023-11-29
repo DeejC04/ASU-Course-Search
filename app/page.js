@@ -1,9 +1,10 @@
-import ClassSearch from "@/components/ClassSearch";
+import ClassSearch from "@/app/components/ClassSearch";
+import NewClassSearch from "./components/newClassSearch";
 
 export default function Home() {
   return (
     <main>
-      <ClassSearch></ClassSearch>
+      <NewClassSearch></NewClassSearch>
     </main>
   )
 }
