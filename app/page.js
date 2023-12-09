@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <div className="flex h-full justify-center items-center">
+      <div className="flex flex-col h-screen justify-center items-center">
         <h1 className="text-9xl">College<span className="text-red-600 font-bold">Spark</span></h1>
         <p className="text-xl m-8">Get what <span className="text-red-600 font-bold">you</span> want out of college</p>
         <div className="w-96 flex justify-between">

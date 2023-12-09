@@ -1,4 +1,4 @@
-import CourseEntry from "@/components/CourseEntry";
+import CourseEntry from "@/app/components/CourseEntry";
 
 export default function Page() {
     return (

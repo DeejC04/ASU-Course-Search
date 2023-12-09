@@ -1,3 +1,5 @@
+import queryString from "query-string"
+
 const getQueryStringFromState = (data) => {       
     const params = {
         term: isEmpty(data.term) ? "2191" : data.term,
@@ -27,3 +29,20 @@ const getQueryStringFromState = (data) => {
 
     return queryString.stringify(params)
 }
+
+export async function getData(searchParams) {
+    const res = await fetch('https://eadvs-cscc-catalog-api.apps.asu.edu/catalog-microservices/api/v1/search/classes?&refine=Y&' + queryString.stringify(searchParams), {
+        headers: {
+            "Authorization": "Bearer null"
+        }
+    })
+    // The return value is *not* serialized
+    // You can return Date, Map, Set, etc.
+   
+    if (!res.ok) {
+      // This will activate the closest `error.js` Error Boundary
+      throw new Error('Failed to fetch data')
+    }
+   
+    return res.json()
+  }
